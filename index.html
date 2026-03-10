@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Fvalentim Transportes</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
@@ -18,22 +22,22 @@
 <div class="container header-container">
 
 <div class="logo">
-<img src="logo.png" alt="Fvalentim Transportes">
+<img src="logo.png">
 </div>
 
-<nav id="menu">
+<nav id="nav">
 
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#servicos">Serviços</a></li>
-<li><a href="#especialidades">Especialidades</a></li>
+<li><a href="#frota">Frota</a></li>
 <li><a href="#contato">Contato</a></li>
 </ul>
 
 </nav>
 
-<div class="menu-toggle" onclick="toggleMenu()">
-☰
+<div class="menu-btn" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
 </div>
 
 <a class="btn" href="#contato">Solicitar Cotação</a>
@@ -42,16 +46,15 @@
 
 </header>
 
-
 <section class="hero" id="home">
 
-<div class="container">
+<div class="container hero-content">
 
 <h1>Fvalentim Transportes</h1>
 
 <p>
-Empresa localizada em Santa Bárbara d'Oeste especializada
-em transporte rodoviário e soluções logísticas.
+Soluções em transporte e logística em Santa Bárbara d'Oeste
+com segurança, agilidade e confiança.
 </p>
 
 <a class="btn-primary" href="#contato">Fale Conosco</a>
@@ -59,7 +62,6 @@ em transporte rodoviário e soluções logísticas.
 </div>
 
 </section>
-
 
 <section class="services" id="servicos">
 
@@ -70,33 +72,27 @@ em transporte rodoviário e soluções logísticas.
 <div class="cards">
 
 <div class="card">
-<h3>Entrega Expressa</h3>
-<p>Transporte rápido e seguro para cargas urgentes.</p>
-</div>
-
-<div class="card">
+<i class="fas fa-truck"></i>
 <h3>Carga Fechada</h3>
-<p>Veículos exclusivos para transporte dedicado.</p>
+<p>Transporte dedicado para sua carga.</p>
 </div>
 
 <div class="card">
+<i class="fas fa-box"></i>
 <h3>Carga Fracionada</h3>
-<p>Compartilhamento de carga para reduzir custos.</p>
+<p>Compartilhamento logístico eficiente.</p>
 </div>
 
 <div class="card">
+<i class="fas fa-shipping-fast"></i>
+<h3>Entrega Expressa</h3>
+<p>Transporte rápido e seguro.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-warehouse"></i>
 <h3>Logística</h3>
-<p>Planejamento logístico para empresas.</p>
-</div>
-
-<div class="card">
-<h3>Distribuição</h3>
-<p>Entrega regional eficiente e organizada.</p>
-</div>
-
-<div class="card">
-<h3>Armazenagem</h3>
-<p>Controle e organização de estoque.</p>
+<p>Soluções logísticas completas.</p>
 </div>
 
 </div>
@@ -105,52 +101,30 @@ em transporte rodoviário e soluções logísticas.
 
 </section>
 
-
-<section class="stats">
-
-<div class="container stats-grid">
-
-<div>
-<h3>10+</h3>
-<p>Anos de experiência</p>
-</div>
-
-<div>
-<h3>1000+</h3>
-<p>Clientes atendidos</p>
-</div>
-
-<div>
-<h3>20000+</h3>
-<p>Entregas realizadas</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="specialties" id="especialidades">
+<section class="fleet" id="frota">
 
 <div class="container">
 
-<h2>Especialidades</h2>
+<h2>Nossa Frota</h2>
 
-<div class="cards">
+<div class="fleet-grid">
 
-<div class="card">
-<h3>Transporte Empresarial</h3>
-<p>Logística eficiente para empresas e indústrias.</p>
+<div class="fleet-card">
+<img src="caminhao.jpg">
+<h3>Caminhão Baú</h3>
+<p>Ideal para cargas secas e transporte urbano.</p>
 </div>
 
-<div class="card">
-<h3>Cargas Comerciais</h3>
-<p>Transporte de produtos e mercadorias.</p>
+<div class="fleet-card">
+<img src="caminhao.jpg">
+<h3>Caminhão Truck</h3>
+<p>Alta capacidade para grandes volumes.</p>
 </div>
 
-<div class="card">
-<h3>Soluções Personalizadas</h3>
-<p>Planejamento de transporte conforme sua necessidade.</p>
+<div class="fleet-card">
+<img src="caminhao.jpg">
+<h3>VUC</h3>
+<p>Veículo urbano para entregas rápidas.</p>
 </div>
 
 </div>
@@ -159,23 +133,36 @@ em transporte rodoviário e soluções logísticas.
 
 </section>
 
+<section class="map">
+
+<div class="container">
+
+<h2>Onde Estamos</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Santa+Barbara+d'Oeste+SP&output=embed">
+</iframe>
+
+</div>
+
+</section>
 
 <section class="cta" id="contato">
 
 <div class="container">
 
-<h2>Precisa transportar sua carga?</h2>
+<h2>Solicite um orçamento</h2>
 
-<p>Entre em contato com a Fvalentim Transportes.</p>
+<p>Entre em contato conosco pelo WhatsApp</p>
 
-<a class="btn-primary" href="https://wa.me/5511999999999">
-WhatsApp
+<a class="btn-primary"
+href="https://wa.me/5511999999999">
+Falar no WhatsApp
 </a>
 
 </div>
 
 </section>
-
 
 <footer>
 
@@ -189,8 +176,15 @@ WhatsApp
 
 </footer>
 
+<a class="whatsapp"
+href="https://wa.me/5511999999999">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
