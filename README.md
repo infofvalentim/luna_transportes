@@ -1,42 +1,56 @@
 # 🚚 Fvalentim Transportes
 
-Site institucional da **Fvalentim Transportes**, empresa de logística e transporte rodoviário com sede em Santa Bárbara d'Oeste - SP.
+Site institucional fictício desenvolvido para fins de **estudo e prática** de desenvolvimento web front-end.
 
 🔗 **[Ver site ao vivo](https://infofvalentim.github.io/fvalentim_transportes/)**
 
 ---
 
-## 📋 Sobre o Projeto
+## 📚 Objetivo
 
-Site one-page desenvolvido com HTML, CSS e JavaScript puro, sem frameworks ou dependências de build. O objetivo é apresentar os serviços da empresa, gerar confiança com clientes B2B e converter visitantes em leads via WhatsApp e formulários de cotação.
+Praticar a criação de um site institucional completo do zero, aplicando conceitos de HTML semântico, CSS moderno e JavaScript vanilla — sem frameworks ou ferramentas de build.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5** — estrutura semântica e acessível
+- **CSS3** — variáveis CSS, Grid, Flexbox, animações e responsividade
+- **JavaScript** (ES6+) — sem frameworks, vanilla puro
+- **[Font Awesome 6.5](https://fontawesome.com/)** — ícones via CDN
+- **[Google Fonts](https://fonts.google.com/)** — Barlow Condensed + Montserrat
+- **GitHub Pages** — hospedagem estática gratuita
+
+---
+
+## 🧠 Conceitos Praticados
+
+- Estrutura de layout com **CSS Grid** e **Flexbox**
+- **Variáveis CSS** (`--blue`, `--red`, etc.) para manutenção de tema
+- **Animações CSS** (`@keyframes`, `transition`)
+- **JavaScript sem jQuery**: manipulação de DOM, eventos, timers
+- **IntersectionObserver API** — para acionar animações ao rolar a página
+- Design **responsivo** com `@media queries`
+- Boas práticas de **SEO** (meta tags, Open Graph, alt em imagens)
+- **Acessibilidade** básica (`aria-label`, `title` em iframes, semântica HTML)
+- Uso de **CDN externo** (Font Awesome, Google Fonts)
 
 ---
 
 ## 🗂️ Estrutura de Seções
 
-| Seção | Descrição |
+| Seção | O que pratica |
 |---|---|
-| **Hero** | Banner principal com animação do caminhão e CTAs |
-| **Sobre** | História da empresa, diferenciais e credenciais |
-| **Serviços** | 6 serviços oferecidos com ícones e descrições |
-| **Frota** | Apresentação dos veículos disponíveis |
-| **Resultados** | Contadores animados (entregas, clientes, anos, satisfação) |
-| **Cobertura** | Cidades e regiões atendidas no interior de SP |
-| **Depoimentos** | Avaliações de clientes com estrelas |
-| **Cotação** | Formulário de solicitação de cotação rápida |
-| **Contato** | Informações de contato e formulário de mensagem |
-| **Mapa** | Google Maps embedado com localização |
-
----
-
-## 🛠️ Tecnologias
-
-- **HTML5** — estrutura semântica e acessível
-- **CSS3** — variáveis CSS, Grid, Flexbox, animações
-- **JavaScript** (ES6+) — sem frameworks
-- **[Font Awesome 6.5](https://fontawesome.com/)** — ícones SVG via CDN
-- **[Google Fonts](https://fonts.google.com/)** — Barlow Condensed + Montserrat
-- **GitHub Pages** — hospedagem gratuita
+| **Hero** | Background fixo, overlay com gradiente, animação CSS |
+| **Sobre** | CSS Grid assimétrico, cards posicionados com `absolute` |
+| **Serviços** | Grid responsivo com `auto-fit/minmax`, hover com transform |
+| **Frota** | Grid com imagens, `object-fit`, efeito scale no hover |
+| **Resultados** | `IntersectionObserver` + contador animado com `setInterval` |
+| **Cobertura** | Grid de tags com `border-left` e hover com `translateX` |
+| **Depoimentos** | Cards com pseudo-elementos `::before/::after` para aspas |
+| **Cotação** | Formulário com `select`, `grid` de campos, validação nativa |
+| **Contato** | Layout de dois blocos, `focus` com `box-shadow` |
+| **Mapa** | Embed de Google Maps com `loading="lazy"` |
 
 ---
 
@@ -44,82 +58,59 @@ Site one-page desenvolvido com HTML, CSS e JavaScript puro, sem frameworks ou de
 
 ```
 fvalentim_transportes/
-├── index.html          # Estrutura principal do site
-├── style.css           # Estilos e responsividade
+├── index.html          # Estrutura e conteúdo
+├── style.css           # Estilos, layout e responsividade
 ├── script.js           # Interações e animações
-├── README.md           # Documentação do projeto
+├── README.md           # Documentação
 └── images/
     ├── hero.jpg        # Imagem de fundo do banner
-    ├── truck.png       # Caminhão animado no hero
-    ├── fleet2.png      # Foto da frota (Truck / Baú)
-    ├── fleet3.png      # Foto da frota (Veículo urbano)
+    ├── truck.png       # Caminhão animado
+    ├── fleet2.png      # Foto de frota
+    ├── fleet3.png      # Foto de frota
     └── favicon.ico     # Ícone do site
 ```
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Funcionalidades Implementadas
 
 - ✅ Menu responsivo com toggle mobile
-- ✅ Animação do caminhão percorrendo o hero
-- ✅ Contadores animados com `IntersectionObserver` (disparam ao entrar na tela)
-- ✅ Formulário de cotação com campos: origem, destino, tipo de carga, peso, prazo
+- ✅ Animação do caminhão percorrendo a tela (`@keyframes`)
+- ✅ Contadores animados disparados pelo scroll (`IntersectionObserver`)
+- ✅ Formulário de cotação com múltiplos campos
 - ✅ Formulário de contato com feedback visual
-- ✅ Botão WhatsApp fixo com ícone SVG oficial
-- ✅ Botão "Voltar ao topo" com aparição ao rolar
-- ✅ Scroll suave em todos os links internos
-- ✅ Fade-in animado nos cards ao entrar na tela
-- ✅ Open Graph tags para preview em redes sociais e WhatsApp
-- ✅ `meta description` para SEO
-- ✅ Atributos `alt` em todas as imagens
-- ✅ `loading="lazy"` no iframe do Google Maps
-- ✅ `preconnect` para otimização de carregamento das fontes
-- ✅ Layout totalmente responsivo (mobile, tablet, desktop)
+- ✅ Botão WhatsApp fixo com ícone SVG
+- ✅ Botão "Voltar ao topo" com aparição progressiva
+- ✅ Scroll suave em links internos
+- ✅ Fade-in nos cards ao entrar na viewport
+- ✅ Open Graph tags para preview em redes sociais
+- ✅ Layout 100% responsivo
 
 ---
 
-## 🚀 Como Executar Localmente
-
-Não é necessário nenhum servidor ou ferramenta de build. Basta clonar e abrir:
+## 🚀 Como Rodar Localmente
 
 ```bash
 git clone https://github.com/infofvalentim/fvalentim_transportes.git
 cd fvalentim_transportes
-# Abra o index.html no navegador
+# Abra o index.html diretamente no navegador
 ```
 
-Ou com Live Server no VS Code:
-```bash
-# Instale a extensão Live Server no VS Code
-# Clique com o botão direito em index.html → "Open with Live Server"
-```
+Ou use a extensão **Live Server** no VS Code para hot reload durante o desenvolvimento.
 
 ---
 
-## ⚠️ Dados para Atualizar
+## 📈 Próximos Passos de Estudo
 
-Antes de publicar em produção, substitua os placeholders abaixo pelos dados reais:
-
-| Campo | Localização | Valor atual |
-|---|---|---|
-| Número WhatsApp | `index.html` (2x) e `style.css` | `5519999999999` |
-| Telefone exibido | `index.html` (3x) | `(19) 99999-9999` |
-| E-mail | `index.html` (2x) | `contato@fvalentim.com.br` |
-| CNPJ | `index.html` (2x) | `00.000.000/0001-00` |
-| RNTRC | `index.html` (2x) | `000000` |
+- [ ] Refatorar o CSS usando metodologia **BEM**
+- [ ] Recriar o projeto usando **React** ou **Vue**
+- [ ] Adicionar **SASS/SCSS** no lugar do CSS puro
+- [ ] Integrar um formulário real com **Formspree** ou **EmailJS**
+- [ ] Implementar **Google Analytics**
+- [ ] Criar testes com **Jest** ou **Cypress**
 
 ---
 
-## 📈 Melhorias Futuras
+## 👨‍💻 Autor
 
-- [ ] Integrar formulários com [Formspree](https://formspree.io) ou [EmailJS](https://www.emailjs.com/)
-- [ ] Adicionar Google Analytics / Search Console
-- [ ] Substituir imagens genéricas por fotos reais da frota e equipe
-- [ ] Criar página `/obrigado.html` para rastreamento de conversões
-- [ ] Adicionar certificações e selos (ANTT, RNTRC) com imagem
-
----
-
-## 📄 Licença
-
-Projeto privado — © 2026 Fvalentim Transportes. Todos os direitos reservados.
+Desenvolvido por **infofvalentim** — projeto de estudo front-end.
