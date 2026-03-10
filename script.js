@@ -9,7 +9,6 @@ menu.style.display === "block"
 
 }
 
-
 /* contador animado */
 
 const counters = document.querySelectorAll(".counter");
