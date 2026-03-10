@@ -4,89 +4,80 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Fvalentim Transportes</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
 
-<header class="header">
+<header>
 
-<div class="container nav-container">
+<div class="container nav">
 
-<div class="logo">
-Fvalentim
-</div>
+<h2 class="logo">Fvalentim</h2>
 
-<nav id="nav">
+<nav id="menu">
 
 <ul>
+
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Serviços</a></li>
 <li><a href="#fleet">Frota</a></li>
-<li><a href="#contact">Contato</a></li>
+<li><a href="#stats">Resultados</a></li>
+<li><a href="#map">Localização</a></li>
+
 </ul>
 
 </nav>
 
-<div class="menu-toggle" onclick="toggleMenu()">
-<i class="fas fa-bars"></i>
-</div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 </div>
 
 </header>
 
-<section class="hero" id="home">
+<section class="hero parallax" id="home">
 
-<div class="hero-overlay"></div>
-
-<div class="hero-content reveal">
+<div class="hero-content">
 
 <h1>Fvalentim Transportes</h1>
 
 <p>
-Logística moderna e transporte seguro
-em Santa Bárbara d'Oeste.
+Logística moderna e transporte seguro em
+Santa Bárbara d'Oeste.
 </p>
 
-<a href="#contact" class="btn-primary">
-Solicitar Cotação
-</a>
+<a class="btn" href="#services">Conhecer Serviços</a>
 
 </div>
+
+<img src="truck.png" class="truck">
 
 </section>
 
-<section class="services container">
+<section class="services container" id="services">
 
-<h2 class="section-title reveal">Nossos Serviços</h2>
+<h2>Serviços</h2>
 
 <div class="grid">
 
-<div class="card reveal">
-<i class="fas fa-truck"></i>
+<div class="card">
 <h3>Carga Fechada</h3>
-<p>Transporte dedicado para sua empresa.</p>
+<p>Transporte dedicado para cargas exclusivas.</p>
 </div>
 
-<div class="card reveal">
-<i class="fas fa-box"></i>
+<div class="card">
 <h3>Carga Fracionada</h3>
 <p>Logística otimizada para pequenos volumes.</p>
 </div>
 
-<div class="card reveal">
-<i class="fas fa-shipping-fast"></i>
+<div class="card">
 <h3>Entrega Expressa</h3>
-<p>Rapidez e segurança para cargas urgentes.</p>
+<p>Entrega rápida e segura.</p>
 </div>
 
 </div>
@@ -95,26 +86,54 @@ Solicitar Cotação
 
 <section class="fleet" id="fleet">
 
-<div class="container">
+<h2>Nossa Frota</h2>
 
-<h2 class="section-title reveal">Nossa Frota</h2>
+<div class="grid container">
 
-<div class="grid">
-
-<div class="fleet-card reveal">
-<img src="truck.jpg">
+<div class="fleet-card">
+<img src="fleet1.jpg">
 <h3>Caminhão Baú</h3>
 </div>
 
-<div class="fleet-card reveal">
-<img src="truck.jpg">
+<div class="fleet-card">
+<img src="fleet2.jpg">
 <h3>Caminhão Truck</h3>
 </div>
 
-<div class="fleet-card reveal">
-<img src="truck.jpg">
-<h3>VUC Urbano</h3>
+<div class="fleet-card">
+<img src="fleet3.jpg">
+<h3>Veículo Urbano</h3>
 </div>
+
+</div>
+
+</section>
+
+<section class="stats" id="stats">
+
+<div class="container stats-grid">
+
+<div>
+
+<h2 class="counter" data-target="12000">0</h2>
+
+<p>Entregas realizadas</p>
+
+</div>
+
+<div>
+
+<h2 class="counter" data-target="800">0</h2>
+
+<p>Clientes atendidos</p>
+
+</div>
+
+<div>
+
+<h2 class="counter" data-target="15">0</h2>
+
+<p>Anos de experiência</p>
 
 </div>
 
@@ -122,25 +141,13 @@ Solicitar Cotação
 
 </section>
 
-<section class="map">
+<section class="map-section" id="map">
 
-<iframe
-src="https://www.google.com/maps?q=Santa+Barbara+d'Oeste+SP&output=embed">
-</iframe>
+<div class="map-overlay">
 
-</section>
+<h2>Atendemos todo Brasil</h2>
 
-<section class="cta" id="contact">
-
-<div class="container reveal">
-
-<h2>Precisa transportar sua carga?</h2>
-
-<p>Fale com nossa equipe.</p>
-
-<a href="https://wa.me/5511999999999" class="btn-primary">
-WhatsApp
-</a>
+<p>Base em Santa Bárbara d'Oeste</p>
 
 </div>
 
@@ -154,13 +161,10 @@ WhatsApp
 
 </footer>
 
-<a href="https://wa.me/5511999999999" class="whatsapp">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
+<a class="whatsapp" href="https://wa.me/5511999999999">WhatsApp</a>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
