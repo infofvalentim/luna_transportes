@@ -28,389 +28,472 @@
 </head>
 <body>
 
+  <!-- SKIP LINK (acessibilidade: pula direto para o conteúdo principal) -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
   <!-- HEADER -->
-  <header id="header">
-    <div class="container nav">
-      <div class="logo">Fvalentim Transportes</div>
-      <nav id="menu">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#fleet">Frota</a></li>
-          <li><a href="#stats">Resultados</a></li>
-          <li><a href="#testimonials">Depoimentos</a></li>
-          <li><a href="#quote" class="nav-cta">Cotação</a></li>
+  <header class="header" id="header" role="banner">
+    <div class="container header__inner">
+      <a href="#home" class="header__logo" aria-label="Fvalentim Transportes - Página inicial">
+        Fvalentim Transportes
+      </a>
+
+      <nav class="nav" id="menu" role="navigation" aria-label="Menu principal">
+        <ul class="nav__list" role="list">
+          <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="#about">Sobre</a></li>
+          <li class="nav__item"><a class="nav__link" href="#services">Serviços</a></li>
+          <li class="nav__item"><a class="nav__link" href="#fleet">Frota</a></li>
+          <li class="nav__item"><a class="nav__link" href="#stats">Resultados</a></li>
+          <li class="nav__item"><a class="nav__link" href="#testimonials">Depoimentos</a></li>
+          <li class="nav__item"><a class="nav__link nav__link--cta" href="#quote">Cotação</a></li>
         </ul>
       </nav>
-      <div class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">
-        <i class="fas fa-bars"></i>
-      </div>
+
+      <button
+        class="header__menu-btn"
+        id="menuBtn"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Abrir menu de navegação"
+      >
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <span class="hero-badge"><i class="fas fa-map-marker-alt"></i> Santa Bárbara d'Oeste — SP</span>
-      <h1>Fvalentim<br>Transportes</h1>
-      <p>Logística inteligente com 15 anos de experiência<br>e mais de 12.000 entregas realizadas.</p>
-      <div class="hero-btns">
-        <a href="#quote" class="btn btn-primary">Solicitar Cotação</a>
-        <a href="#services" class="btn btn-outline">Nossos Serviços</a>
-      </div>
-    </div>
-    <img src="images/truck.png" class="truck" alt="Caminhão Fvalentim Transportes">
-  </section>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="main-content">
 
-  <!-- SOBRE -->
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div class="about-text">
-        <span class="section-tag">Quem somos</span>
-        <h2>15 anos movendo o que importa para você</h2>
-        <p>A Fvalentim Transportes nasceu em Santa Bárbara d'Oeste com um propósito simples: entregar com responsabilidade, pontualidade e cuidado. Ao longo de mais de uma década, construímos uma operação sólida que atende empresas de todos os portes na região de Campinas e no interior de São Paulo.</p>
-        <p>Nossa frota moderna e equipe treinada garantem que cada carga chegue ao destino com segurança, dentro do prazo e em perfeitas condições.</p>
-        <div class="about-badges">
-          <div class="badge-item"><i class="fas fa-shield-halved"></i> Carga segurada</div>
-          <div class="badge-item"><i class="fas fa-clock"></i> Pontualidade garantida</div>
-          <div class="badge-item"><i class="fas fa-headset"></i> Suporte em tempo real</div>
+    <!-- HERO -->
+    <section class="hero" id="home" aria-label="Apresentação">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <span class="hero__badge">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          Santa Bárbara d'Oeste — SP
+        </span>
+        <h1 class="hero__title">Fvalentim<br>Transportes</h1>
+        <p class="hero__subtitle">
+          Logística inteligente com 15 anos de experiência<br>
+          e mais de 12.000 entregas realizadas.
+        </p>
+        <div class="hero__btns">
+          <a href="#quote" class="btn btn--primary">Solicitar Cotação</a>
+          <a href="#services" class="btn btn--outline">Nossos Serviços</a>
         </div>
       </div>
-      <div class="about-visual">
-        <div class="about-card-big">
-          <i class="fas fa-truck-moving"></i>
-          <span>Frota própria</span>
-        </div>
-        <div class="about-card-small top">
-          <i class="fas fa-route"></i>
-          <span>Rotas planejadas</span>
-        </div>
-        <div class="about-card-small bottom">
-          <i class="fas fa-id-card"></i>
-          <span>RNTRC ativo</span>
-        </div>
-      </div>
-    </div>
-  </section>
+      <img
+        src="images/truck.png"
+        class="hero__truck"
+        alt=""
+        aria-hidden="true"
+        role="presentation"
+      >
+    </section>
 
-  <!-- SERVIÇOS -->
-  <section class="services container" id="services">
-    <span class="section-tag center">O que fazemos</span>
-    <h2 class="section-title center">Nossos Serviços</h2>
-    <div class="grid">
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-truck"></i></div>
-        <h3>Transporte Rodoviário</h3>
-        <p>Transporte seguro e eficiente para cargas de todos os tipos e tamanhos no interior de SP.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-boxes-stacked"></i></div>
-        <h3>Carga Fracionada</h3>
-        <p>Logística inteligente para empresas que precisam enviar volumes menores com custo reduzido.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-bolt"></i></div>
-        <h3>Entrega Expressa</h3>
-        <p>Rapidez e pontualidade quando o prazo é crítico para o seu negócio.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-city"></i></div>
-        <h3>Distribuição Urbana</h3>
-        <p>Entregas last-mile em Santa Bárbara d'Oeste e municípios da região de Campinas.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-warehouse"></i></div>
-        <h3>Armazenagem Temporária</h3>
-        <p>Espaço seguro para sua carga aguardar redistribuição ou entrega programada.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i class="fas fa-map-location-dot"></i></div>
-        <h3>Rastreamento</h3>
-        <p>Acompanhe sua carga em tempo real e fique sempre informado sobre o status da entrega.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FROTA -->
-  <section class="fleet" id="fleet">
-    <div class="container">
-      <span class="section-tag center light">Nossa estrutura</span>
-      <h2 class="section-title center light">Nossa Frota</h2>
-      <div class="grid">
-        <div class="fleet-card">
-          <img src="images/fleet2.png" alt="Caminhão Truck">
-          <div class="fleet-info">
-            <h3>Caminhão Truck</h3>
-            <p>Ideal para cargas volumosas e longas distâncias</p>
-          </div>
-        </div>
-        <div class="fleet-card">
-          <img src="images/fleet3.png" alt="Veículo Urbano">
-          <div class="fleet-info">
-            <h3>Veículo Urbano</h3>
-            <p>Agilidade para entregas em centros urbanos</p>
-          </div>
-        </div>
-        <div class="fleet-card">
-          <img src="images/fleet2.png" alt="Caminhão Baú">
-          <div class="fleet-info">
-            <h3>Caminhão Baú</h3>
-            <p>Proteção máxima para cargas sensíveis</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats" id="stats">
-    <div class="container stats-grid">
-      <div class="stat-item">
-        <i class="fas fa-box-open stat-icon"></i>
-        <h2 class="counter" data-target="12000">0</h2>
-        <p>Entregas realizadas</p>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <i class="fas fa-handshake stat-icon"></i>
-        <h2 class="counter" data-target="900">0</h2>
-        <p>Clientes atendidos</p>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <i class="fas fa-calendar-check stat-icon"></i>
-        <h2 class="counter" data-target="15">0</h2>
-        <p>Anos de experiência</p>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <i class="fas fa-star stat-icon"></i>
-        <h2 class="counter" data-target="98">0</h2>
-        <p>% de satisfação</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- COBERTURA -->
-  <section class="coverage container" id="coverage">
-    <span class="section-tag center">Onde atuamos</span>
-    <h2 class="section-title center">Área de Cobertura</h2>
-    <p class="section-sub center">Atendemos Santa Bárbara d'Oeste e toda a região de Campinas, incluindo os principais municípios do interior paulista.</p>
-    <div class="coverage-grid">
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Santa Bárbara d'Oeste</div>
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Americana</div>
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Campinas</div>
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Piracicaba</div>
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Limeira</div>
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Rio Claro</div>
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Sumaré</div>
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Hortolândia</div>
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Nova Odessa</div>
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Indaiatuba</div>
-      <div class="coverage-item"><i class="fas fa-location-dot"></i> Sorocaba</div>
-      <div class="coverage-item coverage-plus"><i class="fas fa-plus"></i> e demais regiões</div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <span class="section-tag center">Quem confia em nós</span>
-      <h2 class="section-title center">Depoimentos de Clientes</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p>"Parceiro de logística há 3 anos. Nunca tivemos atraso em entregas críticas. A Fvalentim é parte da nossa operação."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">MR</div>
-            <div>
-              <strong>Marcos Rodrigues</strong>
-              <span>Gerente de Operações — Ind. Têxtil Americana</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p>"Contratamos para carga fracionada e o custo-benefício é excelente. Atendimento rápido e transparente do início ao fim."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">CS</div>
-            <div>
-              <strong>Carla Souza</strong>
-              <span>Diretora — CS Distribuidora, Campinas</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
-          </div>
-          <p>"Entrega expressa no dia combinado, carga em perfeito estado. Recomendo para qualquer empresa da região."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">PL</div>
-            <div>
-              <strong>Paulo Lima</strong>
-              <span>Proprietário — Lima Peças, Piracicaba</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COTAÇÃO -->
-  <section class="quote-section" id="quote">
-    <div class="container">
-      <div class="quote-wrapper">
-        <div class="quote-text">
-          <span class="section-tag light">Solicite agora</span>
-          <h2>Cotação Rápida</h2>
-          <p>Preencha o formulário e entraremos em contato em até 2 horas úteis com sua cotação personalizada.</p>
-          <ul class="quote-benefits">
-            <li><i class="fas fa-check"></i> Sem compromisso</li>
-            <li><i class="fas fa-check"></i> Resposta em até 2h úteis</li>
-            <li><i class="fas fa-check"></i> Preço justo e transparente</li>
+    <!-- SOBRE -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__text">
+          <span class="section-tag" aria-hidden="true">Quem somos</span>
+          <h2 class="about__title" id="about-title">
+            15 anos movendo o que importa para você
+          </h2>
+          <p class="about__body">
+            A Fvalentim Transportes nasceu em Santa Bárbara d'Oeste com um propósito simples: entregar com responsabilidade, pontualidade e cuidado. Ao longo de mais de uma década, construímos uma operação sólida que atende empresas de todos os portes na região de Campinas e no interior de São Paulo.
+          </p>
+          <p class="about__body">
+            Nossa frota moderna e equipe treinada garantem que cada carga chegue ao destino com segurança, dentro do prazo e em perfeitas condições.
+          </p>
+          <ul class="about__badges" role="list" aria-label="Diferenciais da empresa">
+            <li class="badge">
+              <i class="fas fa-shield-halved" aria-hidden="true"></i> Carga segurada
+            </li>
+            <li class="badge">
+              <i class="fas fa-clock" aria-hidden="true"></i> Pontualidade garantida
+            </li>
+            <li class="badge">
+              <i class="fas fa-headset" aria-hidden="true"></i> Suporte em tempo real
+            </li>
           </ul>
         </div>
-        <form class="quote-form" onsubmit="handleQuote(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Cidade de Origem</label>
-              <input type="text" placeholder="Ex: Americana - SP" required>
-            </div>
-            <div class="form-group">
-              <label>Cidade de Destino</label>
-              <input type="text" placeholder="Ex: Campinas - SP" required>
-            </div>
+        <div class="about__visual" aria-hidden="true">
+          <div class="about__card-big">
+            <i class="fas fa-truck-moving"></i>
+            <span>Frota própria</span>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Tipo de Carga</label>
-              <select required>
-                <option value="" disabled selected>Selecione...</option>
-                <option>Carga geral</option>
-                <option>Fracionada</option>
-                <option>Carga frágil</option>
-                <option>Eletrônicos</option>
-                <option>Outro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Peso Estimado</label>
-              <select required>
-                <option value="" disabled selected>Selecione...</option>
-                <option>Até 100 kg</option>
-                <option>100 – 500 kg</option>
-                <option>500 kg – 1 ton</option>
-                <option>1 – 5 ton</option>
-                <option>Acima de 5 ton</option>
-              </select>
-            </div>
+          <div class="about__card-small about__card-small--top">
+            <i class="fas fa-route"></i>
+            <span>Rotas planejadas</span>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Prazo Desejado</label>
-              <select>
-                <option value="" disabled selected>Selecione...</option>
-                <option>Urgente (mesmo dia)</option>
-                <option>1 – 2 dias úteis</option>
-                <option>3 – 5 dias úteis</option>
-                <option>Sem urgência</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Seu WhatsApp</label>
-              <input type="tel" placeholder="(19) 99999-9999" required>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary full">
-            <i class="fas fa-paper-plane"></i> Solicitar Cotação
-          </button>
-          <p class="form-feedback" id="quoteFeedback"></p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section class="contact container" id="contact">
-    <span class="section-tag center">Fale conosco</span>
-    <h2 class="section-title center">Entre em Contato</h2>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-icon-wrap"><i class="fas fa-phone"></i></div>
-          <div>
-            <strong>Telefone / WhatsApp</strong>
-            <p><a href="https://wa.me/5519999999999" target="_blank">(19) 99999-9999</a></p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon-wrap"><i class="fas fa-envelope"></i></div>
-          <div>
-            <strong>E-mail</strong>
-            <p><a href="mailto:contato@fvalentim.com.br">contato@fvalentim.com.br</a></p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon-wrap"><i class="fas fa-clock"></i></div>
-          <div>
-            <strong>Horário de Atendimento</strong>
-            <p>Segunda a Sexta: 08h – 18h</p>
-            <p>Sábado: 08h – 12h</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon-wrap"><i class="fas fa-building"></i></div>
-          <div>
-            <strong>CNPJ &amp; RNTRC</strong>
-            <p>CNPJ: 00.000.000/0001-00</p>
-            <p>RNTRC: 000000</p>
+          <div class="about__card-small about__card-small--bottom">
+            <i class="fas fa-id-card"></i>
+            <span>RNTRC ativo</span>
           </div>
         </div>
       </div>
-      <form class="contact-form" onsubmit="handleContact(event)">
-        <input type="text" placeholder="Seu nome" required aria-label="Nome">
-        <input type="email" placeholder="Seu e-mail" required aria-label="E-mail">
-        <input type="tel" placeholder="Seu telefone" aria-label="Telefone">
-        <textarea placeholder="Sua mensagem" rows="5" required aria-label="Mensagem"></textarea>
-        <button type="submit" class="btn btn-primary full">
-          <i class="fas fa-paper-plane"></i> Enviar Mensagem
-        </button>
-        <p class="form-feedback" id="contactFeedback"></p>
-      </form>
-    </div>
-  </section>
+    </section>
 
-  <!-- MAPA -->
-  <section class="map-section" id="map">
-    <iframe
-      title="Localização Fvalentim Transportes"
-      src="https://maps.google.com/maps?q=Santa%20Barbara%20d'Oeste&t=&z=13&ie=UTF8&iwloc=&output=embed"
-      loading="lazy">
-    </iframe>
-  </section>
+    <!-- SERVIÇOS -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <span class="section-tag section-tag--center" aria-hidden="true">O que fazemos</span>
+        <h2 class="section-title section-title--center" id="services-title">Nossos Serviços</h2>
+        <ul class="services__grid" role="list">
+          <li class="card">
+            <div class="card__icon" aria-hidden="true"><i class="fas fa-truck"></i></div>
+            <h3 class="card__title">Transporte Rodoviário</h3>
+            <p class="card__body">Transporte seguro e eficiente para cargas de todos os tipos e tamanhos no interior de SP.</p>
+          </li>
+          <li class="card">
+            <div class="card__icon" aria-hidden="true"><i class="fas fa-boxes-stacked"></i></div>
+            <h3 class="card__title">Carga Fracionada</h3>
+            <p class="card__body">Logística inteligente para empresas que precisam enviar volumes menores com custo reduzido.</p>
+          </li>
+          <li class="card">
+            <div class="card__icon" aria-hidden="true"><i class="fas fa-bolt"></i></div>
+            <h3 class="card__title">Entrega Expressa</h3>
+            <p class="card__body">Rapidez e pontualidade quando o prazo é crítico para o seu negócio.</p>
+          </li>
+          <li class="card">
+            <div class="card__icon" aria-hidden="true"><i class="fas fa-city"></i></div>
+            <h3 class="card__title">Distribuição Urbana</h3>
+            <p class="card__body">Entregas last-mile em Santa Bárbara d'Oeste e municípios da região de Campinas.</p>
+          </li>
+          <li class="card">
+            <div class="card__icon" aria-hidden="true"><i class="fas fa-warehouse"></i></div>
+            <h3 class="card__title">Armazenagem Temporária</h3>
+            <p class="card__body">Espaço seguro para sua carga aguardar redistribuição ou entrega programada.</p>
+          </li>
+          <li class="card">
+            <div class="card__icon" aria-hidden="true"><i class="fas fa-map-location-dot"></i></div>
+            <h3 class="card__title">Rastreamento</h3>
+            <p class="card__body">Acompanhe sua carga em tempo real e fique sempre informado sobre o status da entrega.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FROTA -->
+    <section class="fleet" id="fleet" aria-labelledby="fleet-title">
+      <div class="container">
+        <span class="section-tag section-tag--center section-tag--light" aria-hidden="true">Nossa estrutura</span>
+        <h2 class="section-title section-title--center section-title--light" id="fleet-title">Nossa Frota</h2>
+        <ul class="fleet__grid" role="list">
+          <li class="fleet-card">
+            <img src="images/fleet2.png" alt="Caminhão Truck da frota Fvalentim" class="fleet-card__img">
+            <div class="fleet-card__info">
+              <h3 class="fleet-card__title">Caminhão Truck</h3>
+              <p class="fleet-card__body">Ideal para cargas volumosas e longas distâncias</p>
+            </div>
+          </li>
+          <li class="fleet-card">
+            <img src="images/fleet3.png" alt="Veículo Urbano da frota Fvalentim" class="fleet-card__img">
+            <div class="fleet-card__info">
+              <h3 class="fleet-card__title">Veículo Urbano</h3>
+              <p class="fleet-card__body">Agilidade para entregas em centros urbanos</p>
+            </div>
+          </li>
+          <li class="fleet-card">
+            <img src="images/fleet2.png" alt="Caminhão Baú da frota Fvalentim" class="fleet-card__img">
+            <div class="fleet-card__info">
+              <h3 class="fleet-card__title">Caminhão Baú</h3>
+              <p class="fleet-card__body">Proteção máxima para cargas sensíveis</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" id="stats" aria-labelledby="stats-title">
+      <h2 class="sr-only" id="stats-title">Resultados em números</h2>
+      <div class="container stats__grid">
+        <div class="stat">
+          <i class="fas fa-box-open stat__icon" aria-hidden="true"></i>
+          <p class="stat__number counter" data-target="12000" aria-live="polite">0</p>
+          <p class="stat__label">Entregas realizadas</p>
+        </div>
+        <div class="stat__divider" aria-hidden="true"></div>
+        <div class="stat">
+          <i class="fas fa-handshake stat__icon" aria-hidden="true"></i>
+          <p class="stat__number counter" data-target="900" aria-live="polite">0</p>
+          <p class="stat__label">Clientes atendidos</p>
+        </div>
+        <div class="stat__divider" aria-hidden="true"></div>
+        <div class="stat">
+          <i class="fas fa-calendar-check stat__icon" aria-hidden="true"></i>
+          <p class="stat__number counter" data-target="15" aria-live="polite">0</p>
+          <p class="stat__label">Anos de experiência</p>
+        </div>
+        <div class="stat__divider" aria-hidden="true"></div>
+        <div class="stat">
+          <i class="fas fa-star stat__icon" aria-hidden="true"></i>
+          <p class="stat__number counter" data-target="98" aria-live="polite">0</p>
+          <p class="stat__label">% de satisfação</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COBERTURA -->
+    <section class="coverage" id="coverage" aria-labelledby="coverage-title">
+      <div class="container">
+        <span class="section-tag section-tag--center" aria-hidden="true">Onde atuamos</span>
+        <h2 class="section-title section-title--center" id="coverage-title">Área de Cobertura</h2>
+        <p class="section-sub section-sub--center">
+          Atendemos Santa Bárbara d'Oeste e toda a região de Campinas, incluindo os principais municípios do interior paulista.
+        </p>
+        <ul class="coverage__grid" role="list" aria-label="Cidades atendidas">
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Santa Bárbara d'Oeste</li>
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Americana</li>
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Campinas</li>
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Piracicaba</li>
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Limeira</li>
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Rio Claro</li>
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Sumaré</li>
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Hortolândia</li>
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Nova Odessa</li>
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Indaiatuba</li>
+          <li class="coverage__item"><i class="fas fa-location-dot" aria-hidden="true"></i> Sorocaba</li>
+          <li class="coverage__item coverage__item--plus"><i class="fas fa-plus" aria-hidden="true"></i> e demais regiões</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <span class="section-tag section-tag--center" aria-hidden="true">Quem confia em nós</span>
+        <h2 class="section-title section-title--center" id="testimonials-title">Depoimentos de Clientes</h2>
+        <ul class="testimonials__grid" role="list">
+          <li class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="Avaliação: 5 de 5 estrelas" role="img">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              Parceiro de logística há 3 anos. Nunca tivemos atraso em entregas críticas. A Fvalentim é parte da nossa operação.
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">MR</div>
+              <div>
+                <strong class="testimonial-card__name">Marcos Rodrigues</strong>
+                <span class="testimonial-card__role">Gerente de Operações — Ind. Têxtil Americana</span>
+              </div>
+            </footer>
+          </li>
+          <li class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="Avaliação: 5 de 5 estrelas" role="img">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              Contratamos para carga fracionada e o custo-benefício é excelente. Atendimento rápido e transparente do início ao fim.
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">CS</div>
+              <div>
+                <strong class="testimonial-card__name">Carla Souza</strong>
+                <span class="testimonial-card__role">Diretora — CS Distribuidora, Campinas</span>
+              </div>
+            </footer>
+          </li>
+          <li class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="Avaliação: 4.5 de 5 estrelas" role="img">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star-half-stroke" aria-hidden="true"></i>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              Entrega expressa no dia combinado, carga em perfeito estado. Recomendo para qualquer empresa da região.
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">PL</div>
+              <div>
+                <strong class="testimonial-card__name">Paulo Lima</strong>
+                <span class="testimonial-card__role">Proprietário — Lima Peças, Piracicaba</span>
+              </div>
+            </footer>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COTAÇÃO -->
+    <section class="quote" id="quote" aria-labelledby="quote-title">
+      <div class="container">
+        <div class="quote__wrapper">
+          <div class="quote__text">
+            <span class="section-tag section-tag--light" aria-hidden="true">Solicite agora</span>
+            <h2 class="quote__title" id="quote-title">Cotação Rápida</h2>
+            <p class="quote__subtitle">
+              Preencha o formulário e entraremos em contato em até 2 horas úteis com sua cotação personalizada.
+            </p>
+            <ul class="quote__benefits" role="list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Sem compromisso</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Resposta em até 2h úteis</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Preço justo e transparente</li>
+            </ul>
+          </div>
+
+          <form class="quote__form" id="quoteForm" aria-label="Formulário de cotação" novalidate>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="quote-origem">Cidade de Origem</label>
+                <input class="form__input" id="quote-origem" type="text" placeholder="Ex: Americana - SP" required aria-required="true">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="quote-destino">Cidade de Destino</label>
+                <input class="form__input" id="quote-destino" type="text" placeholder="Ex: Campinas - SP" required aria-required="true">
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="quote-tipo">Tipo de Carga</label>
+                <select class="form__input" id="quote-tipo" required aria-required="true">
+                  <option value="" disabled selected>Selecione...</option>
+                  <option>Carga geral</option>
+                  <option>Fracionada</option>
+                  <option>Carga frágil</option>
+                  <option>Eletrônicos</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="quote-peso">Peso Estimado</label>
+                <select class="form__input" id="quote-peso" required aria-required="true">
+                  <option value="" disabled selected>Selecione...</option>
+                  <option>Até 100 kg</option>
+                  <option>100 – 500 kg</option>
+                  <option>500 kg – 1 ton</option>
+                  <option>1 – 5 ton</option>
+                  <option>Acima de 5 ton</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="quote-prazo">Prazo Desejado</label>
+                <select class="form__input" id="quote-prazo">
+                  <option value="" disabled selected>Selecione...</option>
+                  <option>Urgente (mesmo dia)</option>
+                  <option>1 – 2 dias úteis</option>
+                  <option>3 – 5 dias úteis</option>
+                  <option>Sem urgência</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="quote-whatsapp">Seu WhatsApp</label>
+                <input class="form__input" id="quote-whatsapp" type="tel" placeholder="(19) 99999-9999" required aria-required="true">
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Solicitar Cotação
+            </button>
+            <p class="form__feedback" id="quoteFeedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <span class="section-tag section-tag--center" aria-hidden="true">Fale conosco</span>
+        <h2 class="section-title section-title--center" id="contact-title">Entre em Contato</h2>
+        <div class="contact__grid">
+          <address class="contact__info" aria-label="Informações de contato">
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true"><i class="fas fa-phone"></i></div>
+              <div>
+                <strong class="contact-item__label">Telefone / WhatsApp</strong>
+                <p><a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer">(19) 99999-9999</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+              <div>
+                <strong class="contact-item__label">E-mail</strong>
+                <p><a href="mailto:contato@fvalentim.com.br">contato@fvalentim.com.br</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true"><i class="fas fa-clock"></i></div>
+              <div>
+                <strong class="contact-item__label">Horário de Atendimento</strong>
+                <p>Segunda a Sexta: 08h – 18h</p>
+                <p>Sábado: 08h – 12h</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true"><i class="fas fa-building"></i></div>
+              <div>
+                <strong class="contact-item__label">CNPJ &amp; RNTRC</strong>
+                <p>CNPJ: 00.000.000/0001-00</p>
+                <p>RNTRC: 000000</p>
+              </div>
+            </div>
+          </address>
+
+          <form class="contact__form" id="contactForm" aria-label="Formulário de contato" novalidate>
+            <div class="form__group">
+              <label class="form__label" for="contact-nome">Seu nome</label>
+              <input class="form__input" id="contact-nome" type="text" placeholder="Seu nome" required aria-required="true">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="contact-email">Seu e-mail</label>
+              <input class="form__input" id="contact-email" type="email" placeholder="Seu e-mail" required aria-required="true">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="contact-tel">Seu telefone</label>
+              <input class="form__input" id="contact-tel" type="tel" placeholder="(19) 99999-9999">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="contact-msg">Mensagem</label>
+              <textarea class="form__input form__input--textarea" id="contact-msg" rows="5" placeholder="Sua mensagem" required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Mensagem
+            </button>
+            <p class="form__feedback" id="contactFeedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPA -->
+    <section class="map" id="map" aria-label="Localização no mapa">
+      <iframe
+        title="Mapa com a localização de Santa Bárbara d'Oeste - SP"
+        src="https://maps.google.com/maps?q=Santa%20Barbara%20d'Oeste&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        tabindex="-1">
+      </iframe>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-content container">
-      <div class="footer-brand">
+  <footer class="footer" role="contentinfo">
+    <div class="footer__content container">
+      <div class="footer__brand">
         <strong>Fvalentim Transportes</strong>
         <p>Santa Bárbara d'Oeste - SP</p>
         <p>CNPJ: 00.000.000/0001-00</p>
-        <p><i class="fas fa-id-card"></i> RNTRC: 000000</p>
+        <p><i class="fas fa-id-card" aria-hidden="true"></i> RNTRC: 000000</p>
       </div>
-      <div class="footer-links">
+      <nav class="footer__links" aria-label="Links rápidos do rodapé">
         <strong>Links Rápidos</strong>
-        <ul>
+        <ul role="list">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">Sobre</a></li>
           <li><a href="#services">Serviços</a></li>
@@ -418,10 +501,10 @@
           <li><a href="#quote">Cotação</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
-      </div>
-      <div class="footer-services">
+      </nav>
+      <div class="footer__services" aria-label="Serviços oferecidos">
         <strong>Serviços</strong>
-        <ul>
+        <ul role="list">
           <li>Transporte Rodoviário</li>
           <li>Carga Fracionada</li>
           <li>Entrega Expressa</li>
@@ -429,32 +512,44 @@
           <li>Armazenagem Temporária</li>
         </ul>
       </div>
-      <div class="footer-contact-col">
+      <address class="footer__contact" aria-label="Contato no rodapé">
         <strong>Contato</strong>
-        <p><i class="fas fa-phone"></i> (19) 99999-9999</p>
-        <p><i class="fas fa-envelope"></i> contato@fvalentim.com.br</p>
-        <p><i class="fas fa-clock"></i> Seg–Sex: 08h–18h</p>
-        <p><i class="fas fa-clock"></i> Sáb: 08h–12h</p>
-      </div>
+        <p><i class="fas fa-phone" aria-hidden="true"></i> (19) 99999-9999</p>
+        <p><i class="fas fa-envelope" aria-hidden="true"></i> contato@fvalentim.com.br</p>
+        <p><i class="fas fa-clock" aria-hidden="true"></i> Seg–Sex: 08h–18h</p>
+        <p><i class="fas fa-clock" aria-hidden="true"></i> Sáb: 08h–12h</p>
+      </address>
     </div>
-    <div class="footer-bottom">
+    <div class="footer__bottom">
       <p>© 2026 Fvalentim Transportes — Todos os direitos reservados</p>
     </div>
   </footer>
 
   <!-- VOLTAR AO TOPO -->
-  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Voltar ao topo">
-    <i class="fas fa-chevron-up"></i>
+  <button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Voltar ao topo da página"
+    tabindex="0"
+  >
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </button>
 
   <!-- WHATSAPP -->
-  <a class="whatsapp" href="https://wa.me/5519999999999" target="_blank" aria-label="Fale conosco pelo WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white">
+  <a
+    class="whatsapp"
+    href="https://wa.me/5519999999999"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Fale conosco pelo WhatsApp"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true" focusable="false">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
-    <span class="wa-text">WhatsApp</span>
+    <span class="whatsapp__text">WhatsApp</span>
   </a>
 
-  <script src="script.js"></script>
+  <!-- JS em módulos -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
