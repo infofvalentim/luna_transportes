@@ -186,15 +186,22 @@ ul  { list-style: none; }
 }
 
 .header__logo {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 22px;
-  color: var(--blue);
-  letter-spacing: 0.5px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
   transition: opacity var(--transition-fast);
 }
-.header__logo:hover { opacity: 0.8; }
+.header__logo:hover { opacity: 0.85; }
+
+.header__logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .header__logo-img { height: 38px; }
+}
 
 .header__menu-btn {
   display: none;
