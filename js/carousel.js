@@ -15,7 +15,7 @@ export function initCarousel() {
 
   let current  = 0;
   let interval = null;
-  const DELAY  = 5000; // 5 segundos
+  const DELAY  = 7000; // 5 segundos
 
   function goTo(index) {
     // Remove ativo do slide e dot atual
