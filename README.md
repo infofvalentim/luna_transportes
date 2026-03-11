@@ -1,90 +1,86 @@
-# 🚚 Fvalentim Transportes
+# 🚚 Luna Transportes
 
-Site institucional fictício desenvolvido para fins de **estudo e prática** de desenvolvimento web front-end.
+Site institucional desenvolvido como projeto de estudo front-end, simulando uma empresa de transportes e logística em Santa Bárbara d'Oeste - SP.
 
 🔗 **[Ver site ao vivo](https://infofvalentim.github.io/fvalentim_transportes/)**
 
 ---
 
-## 📚 Objetivo
+## 🎯 Objetivo
 
-Praticar a criação de um site institucional completo do zero, aplicando conceitos de HTML semântico, CSS moderno e JavaScript vanilla — sem frameworks ou ferramentas de build.
+Praticar e consolidar conceitos de desenvolvimento web front-end, desde HTML semântico até organização de código com módulos JS e metodologia BEM no CSS.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML5** — estrutura semântica e acessível
-- **CSS3** — variáveis CSS, Grid, Flexbox, animações e responsividade
-- **JavaScript** (ES6+) — sem frameworks, vanilla puro
-- **[Font Awesome 6.5](https://fontawesome.com/)** — ícones via CDN
-- **[Google Fonts](https://fonts.google.com/)** — Barlow Condensed + Montserrat
-- **GitHub Pages** — hospedagem estática gratuita
+- HTML5 semântico
+- CSS3 com metodologia BEM
+- JavaScript ES Modules (sem frameworks)
+- Google Fonts (Barlow Condensed + Montserrat)
+- Font Awesome 6.5
+- GitHub Pages (deploy)
 
 ---
 
-## 🧠 Conceitos Praticados
+## 📚 Conceitos Praticados
 
-- Estrutura de layout com **CSS Grid** e **Flexbox**
-- **Variáveis CSS** (`--blue`, `--red`, etc.) para manutenção de tema
-- **Animações CSS** (`@keyframes`, `transition`)
-- **JavaScript sem jQuery**: manipulação de DOM, eventos, timers
-- **IntersectionObserver API** — para acionar animações ao rolar a página
-- Design **responsivo** com `@media queries`
-- Boas práticas de **SEO** (meta tags, Open Graph, alt em imagens)
-- **Acessibilidade** básica (`aria-label`, `title` em iframes, semântica HTML)
-- Uso de **CDN externo** (Font Awesome, Google Fonts)
-
----
-
-## 🗂️ Estrutura de Seções
-
-| Seção | O que pratica |
+| Seção / Recurso | Conceito |
 |---|---|
-| **Hero** | Background fixo, overlay com gradiente, animação CSS |
-| **Sobre** | CSS Grid assimétrico, cards posicionados com `absolute` |
-| **Serviços** | Grid responsivo com `auto-fit/minmax`, hover com transform |
-| **Frota** | Grid com imagens, `object-fit`, efeito scale no hover |
-| **Resultados** | `IntersectionObserver` + contador animado com `setInterval` |
-| **Cobertura** | Grid de tags com `border-left` e hover com `translateX` |
-| **Depoimentos** | Cards com pseudo-elementos `::before/::after` para aspas |
-| **Cotação** | Formulário com `select`, `grid` de campos, validação nativa |
-| **Contato** | Layout de dois blocos, `focus` com `box-shadow` |
-| **Mapa** | Embed de Google Maps com `loading="lazy"` |
+| Header fixo + menu mobile | Flexbox, `position: fixed`, toggle de classe |
+| Hero com parallax | `background-attachment: fixed`, gradiente overlay |
+| Seção Sobre | CSS Grid, posicionamento absoluto |
+| Cards de Serviços | `auto-fit`, `minmax()`, hover com transição |
+| Frota | Grid responsivo, `object-fit: cover` |
+| Contadores animados | `IntersectionObserver`, `setInterval` |
+| Formulários | Acessibilidade com `aria-*`, `role="status"` |
+| Depoimentos | `blockquote` semântico, CSS quotes |
+| Animações de entrada | `IntersectionObserver` + fade-in escalonado |
+| Acessibilidade | Skip link, `aria-label`, `aria-expanded`, `role`, `tabindex`, `:focus-visible` |
+| BEM | Nomenclatura `.bloco__elemento--modificador` em todo o CSS |
+| Módulos JS | `import/export`, separação por responsabilidade |
 
 ---
 
 ## 📁 Estrutura de Arquivos
 
 ```
-fvalentim_transportes/
-├── index.html          # Estrutura e conteúdo
-├── style.css           # Estilos, layout e responsividade
-├── script.js           # Interações e animações
-├── README.md           # Documentação
-└── images/
-    ├── hero.jpg        # Imagem de fundo do banner
-    ├── truck.png       # Caminhão animado
-    ├── fleet2.png      # Foto de frota
-    ├── fleet3.png      # Foto de frota
-    └── favicon.ico     # Ícone do site
+luna_transportes/
+├── index.html
+├── style.css
+├── js/
+│   ├── main.js        ← ponto de entrada, importa todos os módulos
+│   ├── menu.js        ← menu mobile + acessibilidade por teclado
+│   ├── counter.js     ← contadores animados
+│   ├── forms.js       ← formulários de cotação e contato
+│   └── scroll.js      ← header, voltar ao topo, smooth scroll, fade-in
+├── images/
+│   ├── hero.jpeg
+│   ├── truck.png
+│   ├── fleet1.png
+│   ├── fleet2.png
+│   └── fleet3.png
+└── README.md
 ```
 
 ---
 
-## ✨ Funcionalidades Implementadas
+## ✅ Funcionalidades Implementadas
 
-- ✅ Menu responsivo com toggle mobile
-- ✅ Animação do caminhão percorrendo a tela (`@keyframes`)
-- ✅ Contadores animados disparados pelo scroll (`IntersectionObserver`)
-- ✅ Formulário de cotação com múltiplos campos
-- ✅ Formulário de contato com feedback visual
-- ✅ Botão WhatsApp fixo com ícone SVG
-- ✅ Botão "Voltar ao topo" com aparição progressiva
-- ✅ Scroll suave em links internos
-- ✅ Fade-in nos cards ao entrar na viewport
-- ✅ Open Graph tags para preview em redes sociais
-- ✅ Layout 100% responsivo
+- [x] Menu mobile com toggle e fechamento por ESC
+- [x] Parallax no hero (desativado em mobile)
+- [x] Contadores animados disparados pela viewport
+- [x] Formulário de cotação com feedback visual
+- [x] Formulário de contato com feedback visual
+- [x] Botão voltar ao topo
+- [x] Botão flutuante WhatsApp
+- [x] Caminhão animado no hero
+- [x] Fade-in escalonado nos cards ao rolar
+- [x] Sombra progressiva no header ao rolar
+- [x] Skip link para acessibilidade por teclado
+- [x] Scroll suave com offset do header fixo
+- [x] Open Graph tags para compartilhamento social
+- [x] CSS com variáveis customizadas (`--blue`, `--red`, etc.)
 
 ---
 
@@ -93,24 +89,29 @@ fvalentim_transportes/
 ```bash
 git clone https://github.com/infofvalentim/fvalentim_transportes.git
 cd fvalentim_transportes
-# Abra o index.html diretamente no navegador
+
+# Abrir com Live Server (VS Code) ou qualquer servidor local
+# Não abrir direto como arquivo — os módulos JS precisam de servidor HTTP
 ```
 
-Ou use a extensão **Live Server** no VS Code para hot reload durante o desenvolvimento.
+> ⚠️ Os módulos JS (`type="module"`) não funcionam abrindo o `index.html` direto no navegador. Use o Live Server do VS Code ou `npx serve .`
 
 ---
 
-## 📈 Próximos Passos de Estudo
+## 🗺️ Próximos Passos (Roadmap)
 
-- [ ] Refatorar o CSS usando metodologia **BEM**
-- [ ] Recriar o projeto usando **React** ou **Vue**
-- [ ] Adicionar **SASS/SCSS** no lugar do CSS puro
-- [ ] Integrar um formulário real com **Formspree** ou **EmailJS**
-- [ ] Implementar **Google Analytics**
-- [ ] Criar testes com **Jest** ou **Cypress**
+- [ ] Integrar Formspree nos formulários (envio real de e-mail)
+- [ ] Google Analytics GA4
+- [ ] Google Search Console + sitemap.xml
+- [ ] Migrar CSS para SASS/SCSS
+- [ ] Migrar para React (componentização)
 
 ---
 
-## 👨‍💻 Autor
+## ⚠️ Dados Fictícios
+
+Este é um projeto de estudo. Todos os dados (CNPJ, RNTRC, telefone, e-mail, depoimentos) são fictícios e foram criados apenas para fins de aprendizado.
+
+---
 
 Desenvolvido por **infofvalentim** — projeto de estudo front-end.
